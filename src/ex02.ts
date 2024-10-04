@@ -1,12 +1,23 @@
 // Exercise: Create an enum `DaysOfWeek` with values for each day of the week.
 // Then, write a function `isWeekend` that accepts a value from the enum and returns `true` if it's Saturday or Sunday, and `false` otherwise.
 
-function isWeekend(day) {
-
+enum DaysOfWeek {
+    Sunday = "Sunday",
+    Monday = "Monday",
+    Tuesday = "Tuesday",
+    Wednesday = "Wednesday",
+    Thursday = "Thursday",
+    Friday = "Friday",
+    Saturday = "Saturday"
 }
 
-console.log(isWeekend(DaysOfWeek.Saturday));
-console.log(isWeekend(DaysOfWeek.Wednesday));
+function isWeekend(day: DaysOfWeek): boolean {
+    return day === DaysOfWeek.Saturday || day === DaysOfWeek.Sunday;
+}
+
+
+console.log(isWeekend(DaysOfWeek.Saturday)); 
+console.log(isWeekend(DaysOfWeek.Wednesday)); 
 // Expected output:
 // true
 // false
